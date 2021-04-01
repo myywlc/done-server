@@ -7,7 +7,7 @@ class KoaEjs implements MiddlewareClass {
   public initMiddleware(daruk: Daruk) {
     ejs(daruk.app, {
       root: join(daruk.options.rootPath, './view'),
-      viewExt: 'tpl'
+      viewExt: 'tpl',
     });
   }
 }

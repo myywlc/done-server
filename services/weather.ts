@@ -8,10 +8,12 @@ export default class Weather {
   public async getLatLong(ip: string) {
     return await request(`https://ipapi.co/${ip}/latlong/`);
   }
+
   public async getIP() {
     let json = await request('http://pv.sohu.com/cityjson', { encoding: null });
     return utils.fixIP(json);
   }
+
   public async getWeather() {
     const API_KEY = 'f4019f67f66c97d24751ac71c72f936f';
     const ip = await this.getIP();

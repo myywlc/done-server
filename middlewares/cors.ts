@@ -4,7 +4,7 @@ import {
   defineMiddleware,
   injectable,
   MiddlewareClass,
-  Next
+  Next,
 } from 'daruk';
 
 @defineMiddleware('cors')

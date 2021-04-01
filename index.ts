@@ -6,7 +6,7 @@ import config from './config';
     name: 'myapp',
     rootPath: __dirname,
     // 也可以放404的中间件
-    middlewareOrder: ['koa-ejs', 'koa-favicon', 'errorMid', 'cors']
+    middlewareOrder: ['koa-ejs', 'koa-favicon', 'errorMid', 'cors'],
   });
 
   app.on('access', (ctx: DarukContext) => {

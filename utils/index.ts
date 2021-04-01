@@ -19,5 +19,5 @@ function fixIP(buffer: Buffer) {
 
 export default {
   fixIP,
-  getToday
+  getToday,
 };

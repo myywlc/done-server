@@ -7,6 +7,7 @@ import utils from '../utils';
 @prefix('/comments')
 class Index {
   @inject('weather') private weather!: weather;
+
   @middleware('cors')
   @get('/')
   public async index(ctx: DarukContext, next: Next) {
