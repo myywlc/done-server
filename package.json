@@ -1,13 +1,13 @@
 {
-  "name": "03-weather",
+  "name": "done-server",
   "version": "1.0.0",
-  "description": "daruk",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon --watch ./ --exec ts-node index.ts -e ts,js,json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "xiaojue",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.0",
