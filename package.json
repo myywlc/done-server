@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon --watch ./ --exec ts-node index.ts -e ts,js,json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "pm2 start dist/index.js --no-daemon",
+    "prestart": "npm run build",
+    "stop": "pm2 stop all",
+    "build": "tsc"
   },
   "author": "",
   "license": "MIT",
@@ -24,6 +27,7 @@
     "koa-ejs": "^4.2.0",
     "koa-favicon": "^2.0.1",
     "sqlite3": "^4.0.6",
-    "typeorm": "^0.2.16"
+    "typeorm": "^0.2.16",
+    "pm2": "^4.4.0"
   }
 }

@@ -2,10 +2,9 @@ import { DarukServer, DarukContext, Daruk } from 'daruk';
 import config from './config';
 
 (async () => {
-  let app = DarukServer({
+  const app = DarukServer({
     name: 'myapp',
     rootPath: __dirname,
-    // 也可以放404的中间件
     middlewareOrder: ['koa-ejs', 'koa-favicon', 'errorMid', 'cors'],
   });
 

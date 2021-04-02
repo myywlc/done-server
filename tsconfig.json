@@ -68,7 +68,7 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "build"
   ],
   "include": [
     "typings/*.ts"
