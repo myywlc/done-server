@@ -1,15 +1,15 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-class Comments {
+class User {
   @PrimaryGeneratedColumn()
-  public comments_id!: number;
+  public id!: number;
 
   @Column()
   public name!: string;
 
   @Column()
-  public content!: string;
+  public age!: number;
 }
 
-export default Comments;
+export default User;
