@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "daruk": "latest",
+    "decorator-validator": "^1.2.3",
     "koa-ejs": "^4.2.0",
     "koa-favicon": "^2.0.1",
     "mysql": "^2.18.1",

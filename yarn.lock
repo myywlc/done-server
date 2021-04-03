@@ -777,6 +777,13 @@ decompress-response@^3.3.0:
   dependencies:
     mimic-response "^1.0.0"
 
+decorator-validator@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/decorator-validator/-/decorator-validator-1.2.3.tgz#f9dfc986efbdce53efd97002432c99f019d21b0d"
+  integrity sha512-iIiC+VjtYZuJPcsdymvpbUY+IkHCkZb1bTgr8KXota6yX5Z1IJ54r7m00A5LfOwaG52cqdRM9ps/CQizqr5ECQ==
+  dependencies:
+    zod "^1.11.13"
+
 deep-eql@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/deep-eql/-/deep-eql-3.0.1.tgz#dfc9404400ad1c8fe023e7da1df1c147c4b444df"
@@ -2376,3 +2383,8 @@ zen-observable@^0.8.15:
   version "0.8.15"
   resolved "https://registry.npmjs.org/zen-observable/-/zen-observable-0.8.15.tgz#96415c512d8e3ffd920afd3889604e30b9eaac15"
   integrity sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
+
+zod@^1.11.13:
+  version "1.11.13"
+  resolved "https://registry.npmjs.org/zod/-/zod-1.11.13.tgz#6acb1e52b670afeb816ce2e2ddf6ab359f9ea506"
+  integrity sha512-10+KA7eWa8g1hbKIXkOnhjJ4RKEwX85ECz3VJzP+pWkJOFKn76bHy1kG0d1JHBwmdElLcCsaB0O9HqIfT1vZnw==

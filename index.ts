@@ -5,7 +5,7 @@ import config from './config';
   const app = DarukServer({
     name: 'myapp',
     rootPath: __dirname,
-    middlewareOrder: ['bindDataBase', 'koa-ejs', 'koa-favicon', 'errorMid', 'cors'],
+    middlewareOrder: ['bindDataBase', 'koa-ejs', 'koa-favicon', 'errorMid', 'globalErrorCapture', 'cors'],
   });
 
   app.on('access', (ctx: DarukContext) => {
