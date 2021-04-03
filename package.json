@@ -2,10 +2,10 @@
   "name": "done-server",
   "version": "1.0.0",
   "description": "done server",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon --watch ./ --exec ts-node index.ts -e ts,js,json",
-    "start": "pm2 start dist/index.js --no-daemon",
+    "start": "pm2 start build/index.js",
     "prestart": "npm run build",
     "stop": "pm2 stop all",
     "build": "tsc"
