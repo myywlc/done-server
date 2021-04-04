@@ -15,9 +15,9 @@ class Index {
     }),
   })
   @post('/create')
-  public async create(ctx: DarukContext, next: Next) {
+  public async create(ctx: DarukContext) {
     const { name, age } = ctx.request.body;
-    let user = new User();
+    const user = new User();
     user.name = name;
     user.age = parseInt(age);
 
@@ -32,9 +32,9 @@ class Index {
     }),
   })
   @get('/list')
-  public async index(ctx: DarukContext, next: Next) {
+  public async index(ctx: DarukContext) {
     const { name, age } = ctx.query;
-    let userRepository = ctx.db.getRepository(User);
+    const userRepository = ctx.db.getRepository(User);
     const dataParams: any = {};
     name && (dataParams['name'] = name);
     age && (dataParams['age'] = parseInt(typeof age === 'string' ? age : ''));
@@ -56,10 +56,10 @@ class Index {
     }),
   })
   @put('/update/:id')
-  public async update(ctx: DarukContext, next: Next) {
+  public async update(ctx: DarukContext) {
     const { id } = ctx.params;
     const { name, age } = ctx.request.body;
-    let userRepository = ctx.db.getRepository(User);
+    const userRepository = ctx.db.getRepository(User);
     const user = await userRepository.findOne(parseInt(id));
     user.name = name;
     user.age = parseInt(age);
@@ -77,9 +77,9 @@ class Index {
     }),
   })
   @del('/del/:id')
-  public async remove(ctx: DarukContext, next: Next) {
+  public async remove(ctx: DarukContext) {
     const { id } = ctx.params;
-    let userRepository = ctx.db.getRepository(User);
+    const userRepository = ctx.db.getRepository(User);
     const user = await userRepository.findOne(parseInt(id));
     await userRepository.remove(user);
 

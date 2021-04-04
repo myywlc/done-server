@@ -1,6 +1,7 @@
 import { Daruk, DarukContext, defineMiddleware, MiddlewareClass, Next } from 'daruk';
 import { createConnection } from 'typeorm';
 import config from '../config';
+import Data from '../entity/data';
 import User from '../entity/user';
 
 function getConnection() {
@@ -18,7 +19,7 @@ function getConnection() {
           username: config.db.username,
           password: config.db.password,
           database: config.db.database,
-          entities: [User],
+          entities: [Data, User],
           synchronize: true,
           logging: false,
         })
