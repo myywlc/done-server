@@ -10,6 +10,9 @@ class User {
 
   @Column()
   public age!: number;
+
+  @Column()
+  public data?: string;
 }
 
 export default User;

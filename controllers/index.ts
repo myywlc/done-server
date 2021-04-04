@@ -25,10 +25,20 @@ class Index {
     ctx.body = `add user done, id is ${a.id}`;
   }
 
+  @validator({
+    query: z.object({
+      name: z.any(),
+      age: z.any(),
+    }),
+  })
   @get('/list')
   public async index(ctx: DarukContext, next: Next) {
+    const { name, age } = ctx.query;
     let userRepository = ctx.db.getRepository(User);
-    const list = await userRepository.find();
+    const dataParams: any = {};
+    name && (dataParams['name'] = name);
+    age && (dataParams['age'] = parseInt(typeof age === 'string' ? age : ''));
+    const list = await userRepository.find(dataParams);
 
     ctx.body = {
       success: true,
