@@ -1,4 +1,4 @@
-import { controller, DarukContext, get, post, put, del, Next, prefix } from 'daruk';
+import { controller, DarukContext, del, get, post, prefix, put } from 'daruk';
 import { validator, z } from 'decorator-validator';
 import Data from '../entity/data';
 
